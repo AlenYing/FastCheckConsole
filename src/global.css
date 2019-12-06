@@ -1,0 +1,72 @@
+blockquote, body, button, caption, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, html, input, legend, li, menu, ol, p, pre, table, td, textarea, th, ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+input::-webkit-outer-spin-button,
+
+input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+input[type="number"]{ -moz-appearance: textfield; }
+
+div::-webkit-scrollbar {
+  display: none;
+}
+body{
+  background-color: #F2F2F2;
+  font-family: "Microsoft YaHei",Microsoft YaHei,"微软雅黑",sans-serif;
+}
+input:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-overflow-scrolling: touch
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input {
+  outline-width: 0;
+  outline-style: none;
+  outline-color: invert;
+  outline-color: transparent;
+  border: none;
+  border-style: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1280489 */
+  src: url('//at.alicdn.com/t/font_1280489_tvr5917g6w.eot');
+  src: url('//at.alicdn.com/t/font_1280489_tvr5917g6w.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1280489_tvr5917g6w.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1280489_tvr5917g6w.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1280489_tvr5917g6w.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1280489_tvr5917g6w.svg#iconfont') format('svg');
+}
+.iconfont{
+  width: 100%;
+  height: 100%;
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+input[type="text"]:focus,
+
+input[type="password"]:focus {
+
+
+  outline: none;
+
+}
+.Block{
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+}
