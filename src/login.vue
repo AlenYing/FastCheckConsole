@@ -61,7 +61,7 @@
       },
       Login: function () {
         window.console.log(this.isuser,this.isAdministrator);
-        this.$router.push("main");
+        this.$router.push("main/function/0");
         if (this.isAdministrator) {
           //  管理员登录方法
 
