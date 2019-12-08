@@ -9,9 +9,12 @@
                 <img src="../assets/pigeon.png" alt="">
             </div>
             <div class="logoText"><span style="font-weight: bold">快捷飞签</span>-后台管理</div>
+            <div class="rightOperate" title="退出登录" @click="unLogin">
+                <div><i class="iconfont">&#xe61d;</i></div>
+            </div>
         </div>
         <leftNav :isSelected="isSelected" @goRouter="goIndex"></leftNav>
-        <div :class="[routerView, isSelected ? showGrey:'']" @click="disSelect" >
+        <div :class="[routerView, isSelected ? showGrey:'']" @click="disSelect">
         </div>
         <router-view></router-view>
     </div>
@@ -28,38 +31,59 @@
     data() {
       return {
         isSelected: false,
-        routerView:"routerView",
-        showGrey:"showGrey"
+        routerView: "routerView",
+        showGrey: "showGrey"
       }
     },
-    methods:{
-      select:function () {
+    methods: {
+      select: function () {
         this.isSelected = !this.isSelected
       },
-      disSelect:function(){
+      disSelect: function () {
         this.isSelected = false
       },
-      goIndex:function (index) {
+      goIndex: function (index) {
         switch (index) {
           case 0:
-               this.$router.push(`/main/function/${index}`);
-               break;
+            this.$router.push(`/main/function/${index}`);
+            break;
         }
+      },
+      unLogin:function () {
+        this.$router.push("/")
       }
     }
   }
 </script>
 
 <style scoped>
-    .showGrey{
-        background-color: rgba(0,0,0,.3);
+    .rightOperate {
+        position: relative;
+        float: right;
+        line-height: 50px;
+        margin-right: 2vh;
+        cursor: pointer;
+    }
+
+    .rightOperate:hover {
+        color: red;
+    }
+
+    .rightOperate i {
+        font-size: 20px;
+    }
+
+    .showGrey {
+        background-color: rgba(0, 0, 0, .3);
         z-index: 900;
     }
-.routerView{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-}
+
+    .routerView {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+
     .showLeftBtn {
         position: relative;
         float: left;

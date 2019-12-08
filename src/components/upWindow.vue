@@ -37,7 +37,7 @@
           {Title: "最大人数：", point: "请输入最大人数"},
           {Title: "活动描述：", point: "请输入活动描述（可选）"}
         ],
-        activityInfo: ["YING","123921093","asdjfkasfj","adljad","ajdaskdajk"]
+        activityInfo: []
       }
     },
     methods: {

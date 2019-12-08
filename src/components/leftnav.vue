@@ -66,7 +66,7 @@
         background-color: white;
         -webkit-transition: all .3s cubic-bezier(0,0,.2,1);
         transition: all .3s cubic-bezier(0,0,.2,1);
-        z-index: 2000;
+        z-index: 3000;
     }
     .navBtn i {
         position: absolute;
