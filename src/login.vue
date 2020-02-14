@@ -22,6 +22,7 @@
                     <input class="login-mainInput" v-model="password" placeholder="请输入密码" type="password">
                     <div class="login-mainbtn" @click="Login">登录</div>
                 </div>
+                <!--            LOGO and introduction-->
                 <div class="footer">
                     <div class="footermain">
                         <img src="./assets/logo-1.png">
@@ -32,15 +33,18 @@
                     </div>
                 </div>
             </div>
-            <!--            LOGO and introduction-->
-
         </div>
+        <staWindow></staWindow>
     </div>
 </template>
 
 <script>
+    import staWindow from "./components/staWindow";
   export default {
     name: 'login',
+    components:{
+      staWindow
+    },
     data() {
       return {
         chosed: 'Partchosed',
@@ -60,13 +64,30 @@
         this.isuser = false
       },
       Login: function () {
+         // let _response = ''
         window.console.log(this.isuser,this.isAdministrator);
-        this.$router.push("main/function/0");
         if (this.isAdministrator) {
           //  管理员登录方法
 
         } else if (this.isuser) {
+          this.$router.push('/main/function/0')
           //  用户登录方法
+          // this.$axios.post(`http://192.168.0.195:5000/api/v1/User/${this.account}`,
+          // {
+          //     "password":`${this.password}`
+          // })
+          // .then((response)=>{
+          //     _response = response.statusText
+          //      this.$router.push('/main/function/0')
+          //     window.console.log(_response)
+          // })
+          // .catch(function(error){
+          //     window.console.log(error)
+          // })
+          // window.console.log(_response)
+          // if(_response==="OK"){
+          //     window.console.log("wobeichufale ")
+          // }
         }
       }
     }

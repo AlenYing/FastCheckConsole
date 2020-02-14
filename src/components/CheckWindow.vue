@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="qrcodeBlock">
-                <qrcode-vue :value="value" :size="300"></qrcode-vue>
+                <qrcode-vue :value="value" :size="150"></qrcode-vue>
                 此二维码每<span style="font-weight: bold;">{{updateNum/ 1000}}</span>秒刷新一次
             </div>
         </div>
@@ -89,6 +89,8 @@ export default {
         width: auto;
         height: auto;
         text-align: center;
+        margin-right: 5vh;
+        margin-top: 4vh;
     }
 
     .mainBlock {
