@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <staWindow></staWindow>
+        <staWindow v-if="isLog" :login-suc="isLogFail"></staWindow>
     </div>
 </template>
 
@@ -47,6 +47,8 @@
     },
     data() {
       return {
+        isLogFail:false,
+        isLog:false,
         chosed: 'Partchosed',
         isuser: true,
         isAdministrator: false,
@@ -70,7 +72,10 @@
           //  管理员登录方法
 
         } else if (this.isuser) {
-          this.$router.push('/main/function/0')
+          // this.$router.push('/main/function/0')
+          this.isLog = true
+          this.isLogFail = true
+          window.console.log(this.isLog)
           //  用户登录方法
           // this.$axios.post(`http://192.168.0.195:5000/api/v1/User/${this.account}`,
           // {

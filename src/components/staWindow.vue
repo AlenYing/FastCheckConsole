@@ -1,5 +1,5 @@
 <template>
-<div class="block">
+<div :class="{block:true ,failed:loginSuc}">
  <div class="blockText">
      <i class="iconfont">&#xe607;</i>
      登录成功</div>
@@ -8,6 +8,9 @@
 
 <script>
   export default {
+    props: {
+      loginSuc: Boolean
+    },
     name: "staWindow"
   }
 </script>
@@ -20,6 +23,9 @@
     background: #50d890;
     left:50%;
     margin-left: -10vh;
+}
+.failed{
+    background-color: red;
 }
 .blockText{
     padding-left: 6vh;
