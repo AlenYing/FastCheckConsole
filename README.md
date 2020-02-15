@@ -1,4 +1,6 @@
-# fastconsole
+# 快捷飞签
+
+一个年轻的大学生课堂签到app。
 
 ## Project setup
 ```
