@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import upWindow from "./upWindow";
+import upWindow from "./upload";
 import LoginWindow from "./CheckWindow";
 
 export default {

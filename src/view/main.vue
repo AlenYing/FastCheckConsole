@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import leftNav from "./leftnav";
+  import leftNav from "../components/leftnav";
 
   export default {
     name: "main",

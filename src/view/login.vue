@@ -3,7 +3,7 @@
         <div class="main">
             <!--            图片部分-->
             <div class="main-pic">
-                <img src="./assets/bgf.jpg" style="width:100%;height:100%;">
+                <img src="../assets/bgf.jpg" style="width:100%;height:100%;">
             </div>
             <!--            登录框部分-->
             <div class="main-right">
@@ -25,7 +25,7 @@
                 <!--            LOGO and introduction-->
                 <div class="footer">
                     <div class="footermain">
-                        <img src="./assets/logo-1.png">
+                        <img src="../assets/logo-1.png">
                         <div class="footertext">
                             @上应大易班版权所有<br/>
                             2019.12 v0.1
@@ -34,12 +34,12 @@
                 </div>
             </div>
         </div>
-        <staWindow v-if="isLog" :login-suc="isLogFail"></staWindow>
+        <staWindow  :login-fail="isLogFail" :isLog = "isLog"></staWindow>
     </div>
 </template>
 
 <script>
-    import staWindow from "./components/staWindow";
+    import staWindow from "../components/loginModal";
   export default {
     name: 'login',
     components:{
